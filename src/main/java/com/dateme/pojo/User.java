@@ -3,19 +3,15 @@ package com.dateme.pojo;
 import com.dateme.enums.Gender;
 import com.dateme.enums.Status;
 import com.dateme.spi.Filter;
-import com.sun.tools.javac.jvm.Gen;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import lombok.Getter;
-
 /**
  * Created by shiva.b on 16/06/18.
  */
-@Getter
 public class User {
   private String id;
   private String name;
@@ -36,6 +32,34 @@ public class User {
     this.status = status;
   }
 
+  public String getId() {
+    return this.id;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public Location getLocation() {
+    return this.location;
+  }
+
+  public List<Filter> getFilters() {
+    return this.filters;
+  }
+
+  public Gender getGender() {
+    return this.gender;
+  }
+
+  public Status getStatus() {
+    return this.status;
+  }
+
+  public Set<String> getHobbies() {
+    return this.hobbies;
+  }
+
   public static class UserBuilder {
     private String id;
     private String name;
@@ -45,7 +69,7 @@ public class User {
     private Gender gender;
     private Status status;
 
-    UserBuilder() {
+    public UserBuilder() {
     }
 
     public UserBuilder id(String id) {

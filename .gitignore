@@ -1,0 +1,11 @@
+*.class
+target
+.settings
+.classpath
+.project
+.idea*
+*.iml
+.DS_STORE
+### Java template
+*.class
+*.pyc

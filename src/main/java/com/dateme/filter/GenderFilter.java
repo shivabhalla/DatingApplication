@@ -17,6 +17,7 @@ public class GenderFilter implements Filter {
     this.gender = gender;
   }
 
+  @Override
   public boolean pass(User user) {
     return gender.contains(user.getGender());
   }
